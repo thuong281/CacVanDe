@@ -13,6 +13,7 @@ class LessonDetail(private val lesson: Lesson) : DialogFragment(), GroupAdapter.
     
     private lateinit var binding: DialogFragmentLessionDetailBinding
     private val adapter: GroupAdapter by lazy { GroupAdapter(this) }
+    private val singleAdapter: ItemInGroupAdapter by lazy { ItemInGroupAdapter() }
     
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
@@ -24,12 +25,17 @@ class LessonDetail(private val lesson: Lesson) : DialogFragment(), GroupAdapter.
     
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.rv.adapter = adapter
+        if (lesson.groups.size > 1) {
+            binding.rv.adapter = adapter
+            adapter.items = lesson.groups
+        } else {
+            binding.rv.adapter = singleAdapter
+            singleAdapter.items = lesson.groups[0].items
+        }
         binding.txtTitle.text = lesson.name
         binding.ivBack.setOnClickListener {
             dismiss()
         }
-        adapter.items = lesson.groups
     }
     
     override fun onStart() {

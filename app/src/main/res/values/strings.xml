@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">My Application</string>
+
+    //Bài 1
     <string name="bai_1_string_1">Họa tiết mắc lưới thường hình thoi, dài ngắn khác nhau, cạnh thẳng (hình I, II, II) và
 thỉnh thoảng hơi cong nhẹ (hình CXXXIX). An Nam gọi lối trang trí này là ‘mắt vọng’
 (mắc lưới) vì có dạng giống như thế. Nhưng nếu nó đặt kế bên họa tiết hình thoi uốn cung
@@ -69,5 +71,8 @@ tiết trang trí hình kỷ hà) có khi điểm thêm các họa tiết trang 
 được đưa vào trang trí các tấm biển, hoặc biển dựng đứng (hình XXXV) hoặc biển để
 nằm (hình LV, LVII). Dù dùng trong trường hợp nào loại họa tiết này cũng có nét duyên
 dáng và rất mỹ thuật. </string>
+
+    //Bài 2
+
 
 </resources>
