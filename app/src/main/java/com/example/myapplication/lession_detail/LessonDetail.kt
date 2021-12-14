@@ -42,8 +42,8 @@ class LessonDetail(private val lesson: Lesson) : DialogFragment(), GroupAdapter.
         }
     }
     
-    override fun onGroupClick(group: Group) {
+    override fun onGroupClick(group: Group, position: Int) {
         group.isSelected = !group.isSelected
-        adapter.notifyDataSetChanged()
+        adapter.notifyItemChanged(position)
     }
 }

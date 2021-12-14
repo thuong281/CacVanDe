@@ -1,11 +1,12 @@
 package com.example.myapplication.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Lesson {
     private String name;
     private int imageRsc;
-    private List<Group> groups;
+    private List<Group> groups = new ArrayList();
 
     public int getImageRsc() {
         return imageRsc;

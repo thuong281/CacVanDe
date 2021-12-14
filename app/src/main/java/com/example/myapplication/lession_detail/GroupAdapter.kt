@@ -39,13 +39,13 @@ class GroupAdapter(private val listener: ClickListener) : RecyclerView.Adapter<I
             (adapter as ItemInGroupAdapter).items = items[position].items
         }
         holder.group.setOnClickListener {
-            listener.onGroupClick(items[position])
+            listener.onGroupClick(items[position], position)
         }
     }
     
     override fun getItemCount() = items.size
     
     interface ClickListener {
-        fun onGroupClick( group: Group)
+        fun onGroupClick( group: Group, position: Int)
     }
 }

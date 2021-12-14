@@ -1,3 +1,73 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="bai_1_string_1">Họa tiết mắc lưới thường hình thoi, dài ngắn khác nhau, cạnh thẳng (hình I, II, II) và
+thỉnh thoảng hơi cong nhẹ (hình CXXXIX). An Nam gọi lối trang trí này là ‘mắt vọng’
+(mắc lưới) vì có dạng giống như thế. Nhưng nếu nó đặt kế bên họa tiết hình thoi uốn cung
+sẽ thấy có nét tương đồng rõ rệt. Họa tiết này ít khi trang trí đơn độc vì ít mãn nhãn,
+thường kết hợp với họa tiết hoa. Nó được dùng làm nền các tấm chạm hay bức họa. </string>
+    <string name="bai_1_string_2">Họa tiết mắc lưới lục giác có tên An Nam là ‘kim qui’ (rùa vàng). Thực ra nó giống vảy
+con rùa thì đúng hơn. Đôi chỗ họa tiết này được dùng đơn độc (hình IV), nhưng thường
+dùng làm nền hay được điểm xuyết thêm họa tiết hoa (hình VI, VII, VIII).</string>
+    <string name="bai_1_string_3">Ở các bình phong xây gạch họa tiết này riềng ngoài bìa và các lục giác kéo ra rất dài, khi
+thì đứng một mình khi thì hòa trộn với những hàng hình thoi nhỏ khác (hình LXI, LXII).
+Nếu xếp chồng họa tiết lục giác này lên nhau sẽ có loại họa tiết hình sao, gọi là ‘kim qui
+gài’ (hình V, xem thêm hình XVI).
+Họa tiết mắc lưới không đều có tên là ‘mặt rạn’ hay còn gọi ‘kim qui thất thế’ (rùa vàng
+mất dáng). Thực ra hình trang trí này hình như sao chép hình các nhánh đào cách điệu. </string>
+    <string name="bai_1_string_4">Họa tiết mắc lưới tam giác gọi là ‘nhân tự’ (chữ nhân) do có dạng hao hao chữ nhân (人).
+Họa tiết này cũng được dùng làm nền, đứng riêng lẻ hay kết hợp với hoa (hình XI, XII).
+</string>
+    <string name="bai_1_string_5">Họa tiết vòng tròn có ‘kim tiền’(đồng tiền vàng). Họa tiết này có hai vòng tròn đồng tâm
+tạo thành gờ mép bên ngoài và trong có các vòng tròn khác chia cắt vòng ngoài làm bốn
+phần, tạo ra ở tâm một lỗ hình vuông (hình XIII). </string>
+    <string name="bai_1_string_6">Hoa thị là một họa tiết thoát sinh từ họa tiết vòng tròn cắt lẫn nhau và đi qua cùng một
+chỗ sao cho tạo nên ở chỗ ấy thành tâm một ngôi sao bốn cánh (hình XIV, XV). Hoa thị
+chỉ là cách gọi chứ hoa thị màu vàng ngoài đời không đáp ứng được yêu cầu trang trí và
+không mang một ý nghĩa nào cả. Nghĩa là họa tiết hoa thị này không bắt nguồn từ thực
+vật giới cách điệu ra, chỉ là một cái tên đặt theo lối dân dã. Họa tiết hoa thị được dùng
+làm nền, có khi chỉ thuần túy hoa thị nhưng cũng có khi kèm theo hoa lá cách điệu hóa. </string>
+    <string name="bai_1_string_7">Họa tiết có hai vòng tròn gọi là ‘song hoàn’, nhiều vòng liên kết với nhau gọi là ‘liên
+hoàn’. Liên hoàn cũng là loại thoát sinh từ họa tiết vòng tròn và có thể là tiền thân của
+họa tiết hoa thị, có các vòng tròn nối kết với nhau theo mọi chiều. Ở đây chúng ta có một
+ý nghĩa tôn giáo: chỉ sự thân ái, tình yêu, sự kết giao chặt chẽ và không thể chia lìa, một
+sự tương thân tương ái. Nhóm họa tiết này có nhiều dạng: hai vòng tròn gốc gấp khúc lại
+thành lục giác (hình XVI, số 1) và tương tự như vậy cho ra hình lục giác chồng lợp (hình
+XVI, số 2) mà chúng ta đã thấy (hình V); hay là gấp khúc lại thành hình thoi (hình XVI,
+số 3), có một cái nhân đôi lên (hình XVI, số 4). Trang trí ‘dây thắt’ gồm năm hình thoi
+xếp thành hàng và cắt vào nhau; loại họa tiết một hình thoi ở giữa và bốn hình thoi cắt
+vào ở bốn góc hình như cũng liên quan đến họa tiết này (hình XVI, số 5&amp;6). Còn nhiều
+mẫu phức tạp hơn những hình trình bày ở đây. </string>
+    <string name="bai_1_string_8">Loại họa tiết hai vòng tròn bị kéo dài ra thành bầu dục hay bị dồn vào trong một hình chữ
+nhật thường được đặt vào trang trí dây lá hoặc làm tâm cho một bức chạm. Bên trong có
+chữ ‘thọ’ được cách điệu, hoặc hồi văn cuộn xoáy, hoặc các hình vẽ khác. Họa tiết ‘song
+thọ’ (hình XVII) thì bên trong có hai chữ thọ. Họa tiết này có một thể biểu khác gọi là
+‘vạn thọ’, với mô thức này bên trong một vòng tròn có hồi văn xoắn ốc chữ vạn và ở một
+vòng khác có chữ thọ cách điệu. Không nói ra cũng biết đó là biểu tượng của ‘phúc đức’.
+Các họa tiết chúng ta vừa kê ra chỉ là thứ yếu, loại họa tiết quan trọng nhất là họa tiết hồi
+văn (回文). Các chữ Hán-Việt được thể hiện gấp khúc vào nhau, bẻ gập lại, kéo dài ra, hay
+vuốt thon tuỳ theo ngẫu hứng của người nghệ sĩ.</string>
+    <string name="bai_1_string_9">Họa tiết có tên ‘á tự’ gợi dáng nét chữ á (亞) trong tiếng Hán, là một họa tiết hồi văn (hình
+XVIII và XIX). Họa tiết này dùng trang trí nền. Người ta còn gọi là hồi văn chữ thập.
+Một loại khác gọi là ‘hồi văn chữ vạn’, trước kia ở giữa họa tiết này có chữ vạn Phật giáo
+(卐) nay là chữ vạn Hán tự (萬). Tôi đặt tên cho nó là hồi văn xoắn ốc vì từ ở tâm các hàng
+trang trí cuộn xoắn đi ra. Hồi văn này cũng dùng làm nền và thường có điểm thêm hoa.
+Hồi văn chữ công (工) giống với hồi văn ở Phương tây nhất và nó có nhiều kiểu thức
+(modèles), được dùng trang trí khung, với dạng thuần túy hay kết hợp các loại họa tiết
+khác (hình C). Loại thuần túy tuy không có tên riêng nhưng được dùng nhiều, nhất là
+dùng để viền khung, dùng để trang trí góc, đầu hồi, sống mái nhà, quai bình, chân bàn,
+giữa hoành phi, nói tóm lại ở mọi đồ mỹ thuật (từ hình XXI đến XXIX và ở nhiều hình
+khác nữa). </string>
+    <string name="bai_1_string_10">Họa tiết ‘hồi văn lá’ thường kết thúc bằng hình nắp đệm hay tua diềm, nó tỏa ra các hình
+hoa lá cách điệu. Hồi văn lá biến thể thành ‘hồi văn hóa giao’ (hồi văn biến thể thành
+giao long), có các nếp gấp dồn lại và xoay tròn theo dạng cuộn khói (hình XXVII). </string>
+    <string name="bai_1_string_11">Có lẽ dạng hồi văn kỳ lạ nhất là họa tiết dây xích, dùng trang trí nhẹ ở mép bàn (hình
+XXX, XXXI, XXXII). </string>
+    <string name="bai_1_string_12">Hồi văn còn biến cách trong các món đồ gỗ hay cái kệ gọi là ‘cao đề kỷ’ (高提几: cái ghế dựa
+chỗ thấp chỗ cao) hay vắn tắt là ‘cao đề’. Có khi họa tiết này dùng một mình dưới dạng có
+hay không có chân (hình XXXIII và đế đèn có tên được bài này chọn làm nhan đề Họa
+tiết trang trí hình kỷ hà) có khi điểm thêm các họa tiết trang trí khác (hình XXXIV). Nó
+được đưa vào trang trí các tấm biển, hoặc biển dựng đứng (hình XXXV) hoặc biển để
+nằm (hình LV, LVII). Dù dùng trong trường hợp nào loại họa tiết này cũng có nét duyên
+dáng và rất mỹ thuật. </string>
+
 </resources>
