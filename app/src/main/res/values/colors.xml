@@ -8,4 +8,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="header">#DDD8D8</color>
+    <color name="nav">#e88d1e</color>
 </resources>
