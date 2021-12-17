@@ -84,6 +84,20 @@ public class GameFragment extends DialogFragment {
         arrTxvCauTraLoi.add(txvCauTL4);
     }
 
+    void disableUI() {
+        txvCauTL1.setClickable(false);
+        txvCauTL2.setClickable(false);
+        txvCauTL3.setClickable(false);
+        txvCauTL4.setClickable(false);
+    }
+
+    void enableUI() {
+        txvCauTL1.setClickable(true);
+        txvCauTL2.setClickable(true);
+        txvCauTL3.setClickable(true);
+        txvCauTL4.setClickable(true);
+    }
+
     private void setUp() {
         txvThuaGame.setVisibility(View.GONE);
         help5050.setOnClickListener(v -> trogiup5050());
@@ -97,6 +111,7 @@ public class GameFragment extends DialogFragment {
             @Override
             public void onClick(View view) {
                 checkCauTraLoi(((TextView) view));
+                disableUI();
             }
         };
         for (TextView t : arrTxvCauTraLoi) {
@@ -136,11 +151,16 @@ public class GameFragment extends DialogFragment {
                             if (viTriCauHoi > fakeData.arrCauHoi.size()) {
                                 txvThuaGame.setVisibility(View.VISIBLE);
                                 txvThuaGame.setText("Chuc mung ban da duoc ban tinh");
-                                SharedPreferences sharedPref = requireContext().getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
-                                @SuppressLint("CommitPrefEdits") SharedPreferences.Editor editor = sharedPref.edit();
-                                editor.putInt("score", viTriCauHoi-1);
-                                editor.commit();
-                                viewModel.highScore.setValue(viTriCauHoi-1);
+                                if (getActivity() != null) {
+                                    SharedPreferences sharedPref = getActivity().getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
+                                    @SuppressLint("CommitPrefEdits") SharedPreferences.Editor editor = sharedPref.edit();
+                                    int oldScore = sharedPref.getInt("score", 0);
+                                    if (viTriCauHoi-1 > oldScore) {
+                                        editor.putInt("score", viTriCauHoi-1);
+                                    }
+                                    editor.commit();
+                                    viewModel.highScore.setValue(viTriCauHoi-1);
+                                }
                                 new CountDownTimer(2000, 100) {
                                     @Override
                                     public void onTick(long l) {
@@ -158,11 +178,16 @@ public class GameFragment extends DialogFragment {
                         } else {
                             txvThuaGame.setVisibility(View.VISIBLE);
                             txvThuaGame.setText("Mày doom rồi");
-                            SharedPreferences sharedPref = requireContext().getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
-                            @SuppressLint("CommitPrefEdits") SharedPreferences.Editor editor = sharedPref.edit();
-                            editor.putInt("score", viTriCauHoi-1);
-                            editor.commit();
-                            viewModel.highScore.setValue(viTriCauHoi-1);
+                            if (getActivity() != null) {
+                                SharedPreferences sharedPref = getActivity().getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
+                                @SuppressLint("CommitPrefEdits") SharedPreferences.Editor editor = sharedPref.edit();
+                                int oldScore = sharedPref.getInt("score", 0);
+                                if (viTriCauHoi-1 > oldScore) {
+                                    editor.putInt("score", viTriCauHoi-1);
+                                }
+                                editor.commit();
+                                viewModel.highScore.setValue(viTriCauHoi-1);
+                            }
                             new CountDownTimer(2000, 100) {
                                 @Override
                                 public void onTick(long l) {
@@ -188,6 +213,7 @@ public class GameFragment extends DialogFragment {
     }
 
     public void hienCauHoi() {
+        enableUI();
         setCauHoi();
         txvCauHoi.setText(cauHoi.getNoiDung());
         ArrayList<String> arrCauTraLoi = new ArrayList<>(cauHoi.getArrDapAnSai());
