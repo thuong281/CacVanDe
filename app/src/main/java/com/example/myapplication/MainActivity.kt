@@ -18,8 +18,6 @@ class MainActivity : AppCompatActivity() {
     
     private lateinit var binding: ActivityMainBinding
     
-    private val tabTitles = listOf("Họa tiết", "Trò chơi")
-    private val tabIcons = listOf(R.drawable.ic_baseline_menu_book_24, R.drawable.ic_baseline_videogame_asset_24)
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +30,7 @@ class MainActivity : AppCompatActivity() {
     private fun initViewPager() {
         val adapter = PageAdapter(supportFragmentManager, FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT)
         binding.pager.adapter = adapter
+        binding.pager.setPagingEnabled(false)
         binding.pager.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
             override fun onPageScrolled(
                 position: Int, positionOffset: Float, positionOffsetPixels: Int
@@ -46,6 +45,9 @@ class MainActivity : AppCompatActivity() {
                     1 -> {
                         binding.tab.menu.findItem(R.id.game).isChecked  = true
                     }
+                    2 -> {
+                        binding.tab.menu.findItem(R.id.painting).isChecked = true
+                    }
                 }
             }
     
@@ -53,19 +55,19 @@ class MainActivity : AppCompatActivity() {
             }
     
         })
-        binding.tab.setOnNavigationItemSelectedListener (object: BottomNavigationView.OnNavigationItemSelectedListener {
-            override fun onNavigationItemSelected(item: MenuItem): Boolean {
-                when (item.itemId) {
-                    R.id.lesson -> {
-                        binding.pager.currentItem = 0
-                    }
-                    R.id.game -> {
-                        binding.pager.currentItem = 1
-                    }
+        binding.tab.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.lesson -> {
+                    binding.pager.currentItem = 0
                 }
-                return true
+                R.id.game -> {
+                    binding.pager.currentItem = 1
+                }
+                R.id.painting -> {
+                    binding.pager.currentItem = 2
+                }
             }
-    
-        })
+            true
+        }
     }
 }

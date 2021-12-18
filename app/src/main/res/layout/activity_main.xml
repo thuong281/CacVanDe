@@ -7,7 +7,7 @@
     tools:context=".MainActivity"
     android:background="#EFEFE7">
 
-    <androidx.viewpager.widget.ViewPager
+    <com.example.myapplication.CustomViewPager
         android:layout_above="@+id/tab"
         android:id="@+id/pager"
         android:layout_width="match_parent"

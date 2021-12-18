@@ -3,9 +3,13 @@
     <item
         android:id="@+id/lesson"
         android:icon="@drawable/ic_baseline_menu_book_24"
-        android:title="bu cac" />
+        android:title="Sách" />
     <item
         android:id="@+id/game"
         android:icon="@drawable/ic_baseline_videogame_asset_24"
-        android:title="bu lon" />
+        android:title="Trò chơi" />
+    <item
+        android:id="@+id/painting"
+        android:icon="@drawable/ic_baseline_picture_in_picture_24"
+        android:title="Tranh" />
 </menu>
