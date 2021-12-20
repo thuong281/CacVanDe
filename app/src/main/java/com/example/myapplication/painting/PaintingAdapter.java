@@ -19,7 +19,7 @@ import java.util.List;
 
 public class PaintingAdapter extends RecyclerView.Adapter<PaintingAdapter.PaintingViewHolder> {
 
-    private List<Painting> paintings;
+    public List<Painting> paintings;
     private ViewPager2 viewPager2;
     private ClickListener listener;
 

@@ -5,6 +5,24 @@ import java.util.ArrayList;
 public class CauHoi {
     private String noiDung,dapAnDung;
     private ArrayList<String> arrDapAnSai;
+    private boolean coAnh;
+    private int linkAnh;
+
+    public boolean isCoAnh() {
+        return coAnh;
+    }
+
+    public void setCoAnh(boolean coAnh) {
+        this.coAnh = coAnh;
+    }
+
+    public int getLinkAnh() {
+        return linkAnh;
+    }
+
+    public void setLinkAnh(int linkAnh) {
+        this.linkAnh = linkAnh;
+    }
 
     public String getNoiDung() {
         return noiDung;

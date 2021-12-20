@@ -17,6 +17,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -38,11 +39,12 @@ public class GameFragment extends DialogFragment {
 
     int viTriCauHoi = 1;
     View.OnClickListener listener;
-    TextView txvCauHoi, txvCauTL1, txvCauTL2, txvCauTL3, txvCauTL4, txvThuaGame;
+    TextView txvCauHoi, txvCauTL1, txvCauTL2, txvCauTL3, txvCauTL4, txvThuaGame, txvCauHoiAnh;
     ArrayList<TextView> arrTxvCauTraLoi;
     String cauTraLoi;
     FakeData fakeData;
-    ImageView help5050, helpAudience, helpReload;
+    ImageView help5050, helpAudience, anhCauHoi;
+    LinearLayout cauHoiCoAnh;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -77,6 +79,9 @@ public class GameFragment extends DialogFragment {
         help5050 = getView().findViewById(R.id.help_5050);
         helpAudience = getView().findViewById(R.id.help_audience);
         txvThuaGame = getView().findViewById(R.id.txvThuaGame);
+        txvCauHoiAnh = getView().findViewById(R.id.txvCauHoiAnh);
+        anhCauHoi = getView().findViewById(R.id.anhCauHoi);
+        cauHoiCoAnh = getView().findViewById(R.id.cauHoiCoAnh);
 
         arrTxvCauTraLoi.add(txvCauTL1);
         arrTxvCauTraLoi.add(txvCauTL2);
@@ -89,6 +94,9 @@ public class GameFragment extends DialogFragment {
         txvCauTL2.setClickable(false);
         txvCauTL3.setClickable(false);
         txvCauTL4.setClickable(false);
+        help5050.setClickable(false);
+        helpAudience.setClickable(false);
+
     }
 
     void enableUI() {
@@ -96,6 +104,8 @@ public class GameFragment extends DialogFragment {
         txvCauTL2.setClickable(true);
         txvCauTL3.setClickable(true);
         txvCauTL4.setClickable(true);
+        help5050.setClickable(true);
+        helpAudience.setClickable(true);
     }
 
     private void setUp() {
@@ -215,7 +225,17 @@ public class GameFragment extends DialogFragment {
     public void hienCauHoi() {
         enableUI();
         setCauHoi();
-        txvCauHoi.setText(cauHoi.getNoiDung());
+        if (cauHoi.isCoAnh()) {
+            txvCauHoi.setVisibility(View.GONE);
+            cauHoiCoAnh.setVisibility(View.VISIBLE);
+            txvCauHoiAnh.setText(cauHoi.getNoiDung());
+            anhCauHoi.setImageResource(cauHoi.getLinkAnh());
+        } else {
+            txvCauHoi.setVisibility(View.VISIBLE);
+            cauHoiCoAnh.setVisibility(View.GONE);
+            txvCauHoi.setText(cauHoi.getNoiDung());
+        }
+
         ArrayList<String> arrCauTraLoi = new ArrayList<>(cauHoi.getArrDapAnSai());
         arrCauTraLoi.add(cauHoi.getDapAnDung());
 

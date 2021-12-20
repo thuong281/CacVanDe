@@ -29,6 +29,7 @@ public class PaintingFragment extends Fragment implements PaintingAdapter.ClickL
 
     private FragmentPaintingBinding binding;
     private Handler slideHandler = new Handler();
+    private PaintingAdapter adapter;
     List<Painting> paintings = new ArrayList<>();
     ArrayList<Integer> images = new ArrayList<>();
 
@@ -56,7 +57,8 @@ public class PaintingFragment extends Fragment implements PaintingAdapter.ClickL
         for (Painting paint : paintings) {
             images.add(paint.getImage());
         }
-        binding.imageSlider.setAdapter(new PaintingAdapter(paintings, binding.imageSlider, this));
+        adapter = new PaintingAdapter(paintings, binding.imageSlider, this);
+        binding.imageSlider.setAdapter(adapter);
         binding.imageSlider.setClipToPadding(false);
         binding.imageSlider.setClipChildren(false);
         binding.imageSlider.setOffscreenPageLimit(3);
@@ -64,13 +66,10 @@ public class PaintingFragment extends Fragment implements PaintingAdapter.ClickL
 
         CompositePageTransformer compositePageTransformer = new CompositePageTransformer();
         compositePageTransformer.addTransformer(new MarginPageTransformer(40));
-        compositePageTransformer.addTransformer(new ViewPager2.PageTransformer() {
-            @Override
-            public void transformPage(@NonNull @NotNull View page, float position) {
-                float r = 1 - Math.abs(position);
-                page.setScaleY(0.85f + r * 0.15f);
+        compositePageTransformer.addTransformer((page, position) -> {
+            float r = 1 - Math.abs(position);
+            page.setScaleY(0.85f + r * 0.15f);
 
-            }
         });
         binding.imageSlider.setPageTransformer(compositePageTransformer);
 
@@ -102,8 +101,12 @@ public class PaintingFragment extends Fragment implements PaintingAdapter.ClickL
 
     @Override
     public void onPaintingClick(int pos) {
+        ArrayList<Integer> listImages = new ArrayList<>();
+        for (Painting paint : adapter.paintings) {
+            listImages.add(paint.getImage());
+        }
         ShowFullListImageDialog showFullListImageDialog = new ShowFullListImageDialog(getContext(), pos);
-        showFullListImageDialog.setImageUrlList(images);
+        showFullListImageDialog.setImageUrlList(listImages);
         showFullListImageDialog.show();
     }
 }
