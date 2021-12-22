@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/lesson"
+        android:icon="@drawable/ic_baseline_menu_book_24"
+        android:title="Sách" />
+    <item
+        android:id="@+id/game"
+        android:icon="@drawable/ic_baseline_videogame_asset_24"
+        android:title="Trò chơi" />
+    <item
+        android:id="@+id/painting"
+        android:icon="@drawable/ic_baseline_picture_in_picture_24"
+        android:title="Tranh" />
+    <item
+        android:id="@+id/post"
+        android:icon="@drawable/ic_baseline_newspaper_24"
+        android:title="Tin tức" />
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="Hồ sơ" />
+</menu>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "390810185007",
+    "project_id": "cac-van-de",
+    "storage_bucket": "cac-van-de.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:390810185007:android:c83d2a80016556f6c3c5da",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "390810185007-f1vnojc8u5m9ln7v7jgdbnpp8qrotahb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHYoePLPJLmgtHa15bisJl6yX4AbrAigo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "390810185007-f1vnojc8u5m9ln7v7jgdbnpp8qrotahb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

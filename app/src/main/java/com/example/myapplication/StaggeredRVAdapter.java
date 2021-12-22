@@ -38,7 +38,7 @@ public class StaggeredRVAdapter extends RecyclerView.Adapter<StaggeredRVAdapter.
         holder.binding.card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                listener.onLessionClick(lesson);
+                listener.onLessonClick(lesson);
             }
         });
     }
@@ -57,6 +57,6 @@ public class StaggeredRVAdapter extends RecyclerView.Adapter<StaggeredRVAdapter.
         }
     }
     public interface ClickListener {
-        public void onLessionClick(Lesson lesson);
+        public void onLessonClick(Lesson lesson);
     }
 }
