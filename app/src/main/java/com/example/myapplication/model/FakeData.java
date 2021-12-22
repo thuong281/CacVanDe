@@ -17,7 +17,6 @@ public class FakeData {
     public ArrayList<CauHoi> arrCauHoi = new ArrayList<>();
 
     public void taoCauHoi1() {
-        arrCauHoi.add(taoCauHoi("Ảnh bên dưới là ảnh gì", "Sục cặc", "Bắn súng&Bắn tinh&Bắn đạn",true, R.drawable.p9));
         arrCauHoi.add(taoCauHoi("Họa tiết con vật nào không được đề cập trong sách", "Con cua", "Con cá&Con cọp&Con dơi",false, 1));
         arrCauHoi.add(taoCauHoi("Có tất cả bao nhiêu bài trong quyển sách", "12", "11&10&13",false, 1));
         arrCauHoi.add(taoCauHoi("Hình bên dưới thuộc nhóm họa tiết nào", "Nhóm hồi văn", "Nhóm mắc lưới&Nhóm vòng tròn&Nhóm hình vuông",true, R.drawable.p18));

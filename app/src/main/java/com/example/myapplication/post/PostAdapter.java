@@ -26,9 +26,14 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
 
   List<Post> posts;
   Context mContext;
+  ClickListener listener;
 
   public PostAdapter(List<Post> posts) {
     this.posts = posts;
+  }
+
+  public void setListener(ClickListener listener) {
+    this.listener = listener;
   }
 
   public void setPosts(List<Post> posts) {
@@ -48,6 +53,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
     Post post = posts.get(position);
     holder.setImage(post.getImage());
     holder.setTitle(post.getTitle());
+    holder.itemView.setOnClickListener(v -> listener.onPostClick(post));
   }
 
   @Override
@@ -74,5 +80,8 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
     void setTitle(String string) {
       title.setText(string);
     }
+  }
+  public interface ClickListener {
+    public void onPostClick(Post post);
   }
 }
