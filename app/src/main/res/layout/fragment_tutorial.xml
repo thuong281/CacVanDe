@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:textSize="26sp"
         android:textColor="@color/black"
-        android:text="Ngu thế, game này còn phải đọc hướng dẫn à?"
+        android:text="Chọn đáp án đúng"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -272,6 +272,7 @@
             android:background="@drawable/round_corner">
 
             <TextView
+                android:id="@+id/add"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"

@@ -50,7 +50,6 @@ public class PostFragment extends Fragment {
         });
 
         db = FirebaseFirestore.getInstance();
-
         db.collection("posts")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -60,10 +59,10 @@ public class PostFragment extends Fragment {
                             List<Post> tempPosts = new ArrayList<>();
                             for (QueryDocumentSnapshot document : task.getResult()) {
                                 Post tempPost = new Post(document.getId(),
-                                        (String) document.get("title"),
-                                        null,
-                                        Uri.parse((String) document.get("imgURL")),
-                                        "0");
+                                    document.getString("title"),
+                                    document.getString("authorId"),
+                                    Uri.parse((String) document.get("imgURL")),
+                                    document.getString("content"));
                                 tempPosts.add(tempPost);
                             }
                             GridLayoutManager layoutManager = new GridLayoutManager(getContext(), 2);
@@ -81,6 +80,7 @@ public class PostFragment extends Fragment {
                         }
                     }
                 });
+
 
     }
 

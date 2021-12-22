@@ -5,11 +5,11 @@ import android.net.Uri;
 public class Post {
   String id;
   String title;
-  Person author;
+  String author;
   Uri image;
   String content;
 
-  public Post(String id, String title, Person author, Uri image, String content) {
+  public Post(String id, String title, String author, Uri image, String content) {
     this.id = id;
     this.title = title;
     this.author = author;
@@ -33,11 +33,11 @@ public class Post {
     this.title = title;
   }
 
-  public Person getAuthor() {
+  public String getAuthor() {
     return author;
   }
 
-  public void setAuthor(Person author) {
+  public void setAuthor(String author) {
     this.author = author;
   }
 

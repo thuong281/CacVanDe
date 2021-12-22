@@ -1,6 +1,7 @@
 package com.example.myapplication.login;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -14,15 +15,22 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.myapplication.MainActivity;
 import com.example.myapplication.databinding.ActivityLoginBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class LoginActivity extends AppCompatActivity {
   private ActivityLoginBinding binding;
   private final FirebaseAuth auth = FirebaseAuth.getInstance();
+  private final FirebaseFirestore db = FirebaseFirestore.getInstance();
 
   @Override
   protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -66,6 +74,14 @@ public class LoginActivity extends AppCompatActivity {
       if (task.isSuccessful()) {
         Log.d("Mylog", "signInWithEmail:success");
         FirebaseUser user = auth.getCurrentUser();
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        Map<String, Object> map = new HashMap<>();
+        map.put("name", user.getDisplayName());
+        map.put("profileImage", user.getPhotoUrl().toString());
+        map.put("email", user.getEmail());
+        db.collection("person")
+            .document(user.getUid())
+            .set(map);
         updateUiWithUser(user);
       } else
         Toast.makeText(this.getApplicationContext(), task.getException().getMessage(), Toast.LENGTH_LONG).show();
