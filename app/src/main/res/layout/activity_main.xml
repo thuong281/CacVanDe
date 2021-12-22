@@ -5,24 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#EFEFE7">
+    android:background="#E7E9EF">
 
     <com.example.myapplication.CustomViewPager
-        android:layout_above="@+id/tab"
         android:id="@+id/pager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tab" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_alignParentBottom="true"
         android:id="@+id/tab"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabGravity="fill"
-        app:tabMaxWidth="0dp"
+        android:layout_alignParentBottom="true"
         android:background="@color/nav"
-        app:itemTextColor="@color/bottom_nav_color"
         app:itemIconTint="@color/bottom_nav_color"
-        app:menu="@menu/menu_bottom_nav"/>
+        app:itemTextColor="@color/bottom_nav_color"
+        app:menu="@menu/menu_bottom_nav"
+        app:tabGravity="fill"
+        app:tabMaxWidth="0dp" />
 
 </RelativeLayout>

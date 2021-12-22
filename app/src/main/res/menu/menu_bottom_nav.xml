@@ -12,4 +12,12 @@
         android:id="@+id/painting"
         android:icon="@drawable/ic_baseline_picture_in_picture_24"
         android:title="Tranh" />
+    <item
+        android:id="@+id/post"
+        android:icon="@drawable/ic_baseline_newspaper_24"
+        android:title="Tin tức" />
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="Hồ sơ" />
 </menu>

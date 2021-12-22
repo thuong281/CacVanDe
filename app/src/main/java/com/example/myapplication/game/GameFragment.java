@@ -160,7 +160,7 @@ public class GameFragment extends DialogFragment {
                             viTriCauHoi++;
                             if (viTriCauHoi > fakeData.arrCauHoi.size()) {
                                 txvThuaGame.setVisibility(View.VISIBLE);
-                                txvThuaGame.setText("Chuc mung ban da duoc ban tinh");
+                                txvThuaGame.setText("Chúc mừng bạn đã chiến thắng");
                                 if (getActivity() != null) {
                                     SharedPreferences sharedPref = getActivity().getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
                                     @SuppressLint("CommitPrefEdits") SharedPreferences.Editor editor = sharedPref.edit();
@@ -187,7 +187,7 @@ public class GameFragment extends DialogFragment {
                             hienCauHoi();
                         } else {
                             txvThuaGame.setVisibility(View.VISIBLE);
-                            txvThuaGame.setText("Mày doom rồi");
+                            txvThuaGame.setText("Hãy đọc thêm để tăng cường kiến thức nhé");
                             if (getActivity() != null) {
                                 SharedPreferences sharedPref = getActivity().getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
                                 @SuppressLint("CommitPrefEdits") SharedPreferences.Editor editor = sharedPref.edit();

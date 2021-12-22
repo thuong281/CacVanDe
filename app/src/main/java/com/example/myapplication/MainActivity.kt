@@ -1,17 +1,11 @@
 package com.example.myapplication
 
-import com.example.myapplication.R
-import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
-import android.view.*
-import android.widget.LinearLayout
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentStatePagerAdapter
 import androidx.viewpager.widget.ViewPager
-import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.myapplication.databinding.ActivityMainBinding
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.tabs.TabLayoutMediator
 
 
 class MainActivity : AppCompatActivity() {
@@ -48,6 +42,12 @@ class MainActivity : AppCompatActivity() {
                     2 -> {
                         binding.tab.menu.findItem(R.id.painting).isChecked = true
                     }
+                    3 -> {
+                        binding.tab.menu.findItem(R.id.post).isChecked = true
+                    }
+                    4 -> {
+                        binding.tab.menu.findItem(R.id.profile).isChecked = true
+                    }
                 }
             }
     
@@ -65,6 +65,12 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.painting -> {
                     binding.pager.currentItem = 2
+                }
+                R.id.post -> {
+                    binding.pager.currentItem = 3
+                }
+                R.id.profile -> {
+                    binding.pager.currentItem = 4
                 }
             }
             true

@@ -1,8 +1,7 @@
-package com.example.myapplication.lession_detail
+package com.example.myapplication.lession.lession_detail
 
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
-import com.example.myapplication.R
 import com.example.myapplication.databinding.*
 import com.example.myapplication.model.*
 

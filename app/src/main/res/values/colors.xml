@@ -8,5 +8,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="header">#DDD8D8</color>
-    <color name="nav">#e88d1e</color>
+    <color name="nav">#00BCD4</color>
+    <color name="colorPrimary">#AA00FF</color>
+    <color name="colorPrimaryDark">#130B18</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBackground">#FBFBFB</color>
+    <color name="colorPrimaryText">#212121</color>
+    <color name="colorSecondaryText">#757575</color>
 </resources>

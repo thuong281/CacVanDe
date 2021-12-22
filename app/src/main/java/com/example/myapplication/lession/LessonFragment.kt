@@ -6,7 +6,7 @@ import androidx.fragment.app.*
 import androidx.recyclerview.widget.*
 import com.example.myapplication.*
 import com.example.myapplication.databinding.FragmentLessonBinding
-import com.example.myapplication.lession_detail.LessonDetail
+import com.example.myapplication.lession.lession_detail.LessonDetail
 import com.example.myapplication.model.*
 import java.util.*
 
@@ -1131,7 +1131,7 @@ class LessonFragment : Fragment(), StaggeredRVAdapter.ClickListener {
         fragment.show(fm!!, "")
     }
     
-    override fun onLessionClick(lesson: Lesson?) {
+    override fun onLessonClick(lesson: Lesson?) {
         showDialog(LessonDetail(lesson!!))
     }
     

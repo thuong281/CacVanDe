@@ -1,4 +1,4 @@
-package com.example.myapplication.lession_detail
+package com.example.myapplication.lession.lession_detail
 
 
 import android.app.Dialog
